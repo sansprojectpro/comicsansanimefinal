@@ -55,6 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: '100% Gokuama Kareshi!',
+            title: '100% Gokuama Kareshi!',
+            genre: ['Romantis', 'Komedi', 'Drama'],
+            status: 'Completed',
+            sinopsis: 'Kisah cinta manis yang akan meluluhkan hatimu! Sekumpulan pacar termanis. Tidak peduli di mana pun kamu berada atau kapan pun waktunya, aku akan melindungimu.',
+            thumbnail: 'comics/Gokuama Kareshi/Gokuama Kareshi.jpg',
+            isLatest: false,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter1/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter2/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter3/', pageCount: 62, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter4/', pageCount: 44, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter5/', pageCount: 35, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter6': { title: 'Chapter 6: Gokuama Kareshi', pagesPath: 'comics/Gokuama Kareshi/chapter6/', pageCount: 7, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'Chainsaw Man',
             title: 'Chainsaw Man',
             genre: ['Aksi', 'Horor', 'Supernatural'],
