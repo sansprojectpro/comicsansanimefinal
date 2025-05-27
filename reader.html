@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Komik - Comic Sans Anime</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reader.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Arcana Chronicles Logo">
+                <span>Comic Sans Anime</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#chapter-select">Pilih Chapter</a></li> 
+                </ul>
+            </nav>
+            <a href="https://saweria.co/Sanjayadtm" target="_blank" rel="noopener noreferrer" class="btn secondary-btn donate-header-btn">Donasi</a>
+        </div>
+        </div>
+    </header>
+
+    <main id="comic-reader-page">
+        <div class="reader-container">
+            <h2 id="comic-title-reader">Memuat Komik...</h2>
+            <p id="chapter-title">Memuat Chapter...</p>
+
+            <div class="chapter-nav-top">
+                <label for="chapter-select">Pilih Chapter:</label>
+                <select id="chapter-select">
+                    <option value="">Pilih Chapter</option>
+                </select>
+            </div>
+            
+            <div id="comic-pages" class="comic-pages-wrapper">
+                <p>Memuat halaman komik...</p>
+            </div>
+            
+            <div class="reader-controls">
+                <button id="prev-page" class="btn primary-btn" disabled>← Sebelumnya</button>
+                <button id="next-page" class="btn primary-btn" disabled>Selanjutnya →</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Comic Sans Anime. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/reader.js"></script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/683512978c4ed918fea47e58/1is7l180o';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

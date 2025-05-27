@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Sans Anime - Baca Komik Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Arcana Chronicles Logo">
+                <span>Comic Sans Anime</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#all-comics">Semua Komik</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="comic-search" placeholder="Cari komik...">
+                <button id="search-button">Cari</button>
+            </div>
+            <a href="https://saweria.co/Sanjayadtm" target="_blank" rel="noopener noreferrer" class="btn secondary-btn donate-header-btn">Donasi</a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-banner">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Temukan Kisah Epik di Comic Sans Anime</h1>
+                    <p>Selami dunia fantasi yang memukau, penuh dengan misteri dan petualangan yang tak terlupakan. chapter terbaru selalu update setiap hari!</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/logo.jpg" alt="Arcana Chronicles Logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="all-comics" class="comic-showcase">
+            <div class="container">
+                <h2>Semua Komik</h2>
+                <div class="filter-sort-controls">
+                    <div class="filter-group">
+                        <label for="genre-filter">Filter Genre:</label>
+                        <select id="genre-filter">
+                            <option value="all">Semua Genre</option>
+                            </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="status-filter">Filter Status:</label>
+                        <select id="status-filter">
+                            <option value="all">Semua Status</option>
+                            <option value="Ongoing">Ongoing</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="sort-group">
+                        <label for="sort-order">Urutkan Berdasarkan:</label>
+                        <select id="sort-order">
+                            <option value="default">Default</option>
+                            <option value="az">Judul (A-Z)</option>
+                            <option value="za">Judul (Z-A)</option>
+                        </select>
+                    </div>
+                <div class="grid-layout" id="all-comics-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Comic Sans Anime. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/683512978c4ed918fea47e58/1is7l180o';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
