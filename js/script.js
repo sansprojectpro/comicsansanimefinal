@@ -72,6 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: 'Ai kara Hajimaru',
+            title: 'Ai kara Hajimaru',
+            genre: ['Romantis', 'Drama',],
+            status: 'Completed',
+            sinopsis: 'Sakura Ai sangat menyukai bunga matahari dan kebetulan nama cowok cinta pertamanya saat kelas 3 SD dulu adalah Taiyou (artinya: bunga matahari) juga. Sejak saat itu Ai hanya memusatkan perhatian pada urusannya sendiri dan belum pernah pacaran sekalipun, hingga dia bertemu kembali dengan cinta pertamanya dan segalanya mulai berubahkisah cintanya dimulai dimusim panas ke 15-nya',
+            thumbnail: 'comics/Ai kara Hajimaru/Ai kara Hajimaru.jpg',
+            isLatest: true,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: Ai kara Hajimaru', pagesPath: 'comics/Ai kara Hajimaru/chapter1/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: Ai kara Hajimaru', pagesPath: 'comics/Ai kara Hajimaru/chapter2/', pageCount: 32, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: Ai kara Hajimaru', pagesPath: 'comics/Ai kara Hajimaru/chapter3/', pageCount: 29, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'Chainsaw Man',
             title: 'Chainsaw Man',
             genre: ['Aksi', 'Horor', 'Supernatural'],
