@@ -1,38 +1,31 @@
-/* Custom Properties (Variables) - Nuansa Anime yang Lebih Hidup */
+/* Custom Properties (Variables) - Nuansa Minimalis Modern */
 :root {
-    /* Warna dasar yang lebih ceria dan palet "anime" */
-    --anime-bg-main: #f0f4f8; /* Biru muda sangat pucat, tetap */
-    --anime-bg-card: #ffffff; /* Putih bersih untuk card, tetap */
-    --anime-primary: #FF5722; /* Oranye cerah, tetap */
-    --anime-accent: #FFC107; /* Kuning cerah, tetap */
-    --anime-text-dark: #212121; /* Hitam pekat, tetap */
-    --anime-text-light: #616161; /* Abu-abu sedang, tetap */
-    --anime-border: #e0e0e0; /* Abu-abu border halus, tetap */
-    --anime-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih ringan, tetap */
-    --anime-gradient: linear-gradient(135deg, var(--anime-primary) 0%, var(--anime-accent) 100%); /* Gradien utama */
+    /* Palet Warna Baru: Netral dengan aksen elegan */
+    --modern-bg-main: #F8F8F8; /* Hampir putih, latar belakang bersih */
+    --modern-bg-card: #FFFFFF; /* Putih murni untuk card */
+    --modern-primary-accent: #007BFF; /* Biru cerah, aksen utama */
+    --modern-secondary-accent: #6C757D; /* Abu-abu gelap, aksen sekunder / muted text */
+    --modern-text-dark: #212529; /* Hampir hitam, teks utama */
+    --modern-text-light: #495057; /* Abu-abu gelap, teks sekunder */
+    --modern-border: #DEE2E6; /* Abu-abu terang, border halus */
+    --modern-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05); /* Bayangan sangat halus */
+    --modern-shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1); /* Bayangan sedang */
 
-    /* Warna tambahan untuk kesan lebih "pop" dan "anime" */
-    --anime-secondary-accent: #4CAF50; /* Hijau cerah */
-    --anime-blue: #2196F3; /* Biru medium */
-    --anime-pink: #E91E63; /* Pink cerah */
+    /* Menggunakan variabel baru */
+    --primary-color: var(--modern-primary-accent);
+    --accent-color: var(--modern-secondary-accent);
+    --text-dark: var(--modern-text-dark);
+    --text-light: var(--modern-text-light);
+    --bg-light: var(--modern-bg-main);
+    --border-color: var(--modern-border);
+    --header-footer-bg: #343A40; /* Abu-abu gelap, header/footer */
 
-    /* Menghubungkan variabel lama dengan yang baru untuk konsistensi */
-    --primary-color: var(--anime-primary);
-    --accent-color: var(--anime-accent);
-    --text-dark: var(--anime-text-dark);
-    --text-light: var(--anime-text-light);
-    --bg-light: var(--anime-bg-main);
-    --border-color: var(--anime-border);
-    --header-footer-bg: #37474F; /* Abu-abu kebiruan gelap untuk header/footer, tetap */
-
-    /* Variabel spasi dan radius tetap */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 20px;
-    --spacing-lg: 40px;
-    --border-radius: 12px; /* Lebih bulat untuk kesan 'friendly' */
-    --shadow-light: 0 4px 12px rgba(0,0,0,0.1); /* Lebih lembut */
-    --shadow-medium: 0 8px 25px rgba(0,0,0,0.15); /* Lebih lembut */
+    /* Variabel spasi dan radius */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --border-radius: 6px; /* Lebih kotak, kesan modern */
 }
 
 /* Base Styles */
@@ -47,7 +40,7 @@ body {
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
-    scroll-behavior: smooth; /* Efek scroll halus */
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -64,47 +57,45 @@ a {
 
 a:hover {
     color: var(--accent-color);
+    text-decoration: underline; /* Tambahkan underline tipis */
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 14px 28px; /* Tombol sedikit lebih besar */
+    padding: 12px 24px; /* Ukuran standar */
     border-radius: var(--border-radius);
-    font-weight: 700; /* Lebih tebal */
+    font-weight: 600; /* Sedikit lebih ringan dari sebelumnya */
     text-align: center;
-    transition: all 0.3s ease; /* Transisi lebih halus */
+    transition: all 0.2s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Bayangan lebih jelas */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* Bayangan teks lebih kuat */
-    letter-spacing: 0.5px; /* Sedikit spasi huruf */
-    text-transform: uppercase; /* Huruf kapital */
+    box-shadow: var(--modern-shadow-light); /* Bayangan lembut */
+    text-transform: uppercase;
+    letter-spacing: 0.8px; /* Spasi huruf lebih jelas */
+    font-size: 0.9em;
 }
 
 .primary-btn {
-    background: var(--anime-gradient);
+    background-color: var(--primary-color);
     color: white;
 }
 
 .primary-btn:hover {
-    background: linear-gradient(135deg, var(--anime-accent) 0%, var(--anime-primary) 100%); /* Gradien terbalik/berubah warna */
-    color: white;
-    text-decoration: none;
-    transform: translateY(-5px) scale(1.03); /* Efek lebih "pop" */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Bayangan lebih kuat saat hover */
+    background-color: #0056b3; /* Biru sedikit lebih gelap */
+    transform: translateY(-2px); /* Sedikit naik */
+    box-shadow: var(--modern-shadow-medium); /* Bayangan sedikit lebih kuat */
 }
 
-.secondary-btn { /* Gaya baru untuk tombol sekunder */
-    background-color: var(--anime-blue); /* Contoh warna biru */
+.secondary-btn {
+    background-color: var(--accent-color); /* Abu-abu gelap */
     color: white;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
 .secondary-btn:hover {
-    background-color: #5DADE2; /* Biru lebih terang saat hover */
-    transform: translateY(-3px) scale(1.01);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+    background-color: #5a6268; /* Abu-abu lebih gelap */
+    transform: translateY(-2px);
+    box-shadow: var(--modern-shadow-medium);
 }
 
 
@@ -113,18 +104,18 @@ a:hover {
     background-color: var(--header-footer-bg);
     color: white;
     padding: var(--spacing-sm) 0;
-    box-shadow: var(--shadow-light);
-    position: sticky; /* Membuat header sticky */
+    box-shadow: var(--modern-shadow-light);
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Pastikan di atas elemen lain */
-    border-bottom: 3px solid var(--anime-primary); /* Garis bawah yang menarik */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Border sangat halus */
 }
 
 .main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Agar bisa wrap di mobile */
+    flex-wrap: wrap;
 }
 
 .main-header .logo {
@@ -132,16 +123,16 @@ a:hover {
     align-items: center;
     gap: var(--spacing-sm);
     color: white;
-    font-size: 1.8em; /* Logo lebih besar */
-    font-weight: 800; /* Lebih tebal */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* Bayangan teks logo lebih kuat */
+    font-size: 1.6em; /* Ukuran logo lebih halus */
+    font-weight: 700;
+    text-shadow: none; /* Hilangkan bayangan teks */
 }
 
 .main-header .logo img {
-    height: 45px; /* Logo image lebih besar */
+    height: 40px; /* Ukuran logo image disesuaikan */
     width: auto;
-    border-radius: 50%; /* Bulat untuk logo */
-    border: 2px solid white;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border lebih halus */
 }
 
 .main-nav ul {
@@ -156,24 +147,25 @@ a:hover {
 }
 
 .main-nav ul li a {
-    color: white;
-    font-weight: 600;
-    padding: 8px 0; /* Padding lebih banyak */
+    color: rgba(255, 255, 255, 0.7); /* Teks nav lebih transparan */
+    font-weight: 500;
+    padding: 6px 0;
     position: relative;
-    transition: all 0.3s ease;
-    font-size: 1.1em; /* Ukuran teks navigasi lebih besar */
+    transition: all 0.2s ease;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Underline effect on hover */
 .main-nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 4px; /* Garis bawah lebih tebal */
-    bottom: -8px; /* Lebih jauh dari teks */
+    height: 2px; /* Garis bawah lebih tipis */
+    bottom: -6px;
     left: 0;
-    background-color: var(--anime-accent); /* Warna aksen */
-    transition: width 0.3s ease-in-out;
+    background-color: var(--primary-color);
+    transition: width 0.2s ease-in-out;
 }
 
 .main-nav ul li a:hover::after {
@@ -181,83 +173,85 @@ a:hover {
 }
 
 .main-nav ul li a:hover {
-    color: var(--anime-accent);
-    transform: translateY(-3px); /* Efek sedikit naik lebih jelas */
-    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5); /* Sedikit glow saat hover */
+    color: white; /* Putih solid saat hover */
+    transform: translateY(-1px);
+    text-shadow: none;
 }
 
 /* Search Box in Header */
-.header-actions { /* Wadah untuk search dan donasi */
+.header-actions {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    margin-left: var(--spacing-md); /* Memberi jarak dari nav */
-}
-
-.search-box {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+    margin-left: var(--spacing-md);
 }
 
 .search-box input[type="text"] {
-    padding: 10px 15px; /* Ukuran input lebih besar */
+    padding: 8px 12px;
     border-radius: var(--border-radius);
-    border: 2px solid var(--anime-border); /* Border lebih tebal */
-    font-size: 1em; /* Ukuran font lebih besar */
-    background-color: #f8f8f8;
-    color: var(--anime-text-dark);
-    transition: all 0.3s ease;
-    width: 200px; /* Lebar default */
+    border: 1px solid var(--modern-border); /* Border halus */
+    font-size: 0.9em;
+    background-color: white;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+    width: 180px;
 }
 
 .search-box input[type="text"]:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.25); /* Glow saat fokus lebih jelas */
-    width: 250px; /* Lebih lebar saat fokus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    width: 220px;
 }
 
 .search-box button {
-    padding: 10px 18px; /* Ukuran tombol search lebih besar */
-    background-color: var(--anime-secondary-accent); /* Warna hijau cerah */
+    padding: 8px 15px;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: var(--modern-shadow-light);
+    font-size: 0.9em;
 }
 
 .search-box button:hover {
-    background-color: #66BB6A; /* Hijau lebih terang saat hover */
-    transform: translateY(-2px);
+    background-color: #0056b3;
+    transform: translateY(-1px);
 }
 
-.donate-header-btn { /* Gaya untuk tombol donasi di header */
-    padding: 10px 18px; /* Ukuran sama dengan tombol search */
-    margin-left: var(--spacing-sm); /* Jarak dari search box */
+.header-donate-btn {
+    background-color: #28A745; /* Hijau cerah untuk donasi */
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-left: var(--spacing-sm);
+}
+
+.header-donate-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
 }
 
 
 /* Hero Banner */
 #hero-banner {
-    background: linear-gradient(160deg, #d8e6f0 0%, #a2d2ff 100%); /* Gradien biru cerah yang menyegarkan */
+    background: linear-gradient(135deg, #E0F2F7 0%, #D1ECF1 100%); /* Gradien sangat lembut */
     padding: var(--spacing-lg) 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 520px; /* Sedikit lebih tinggi */
+    min-height: 480px;
     position: relative;
     overflow: hidden;
-    border-bottom: 5px solid var(--anime-blue); /* Garis bawah solid */
+    border-bottom: 1px solid var(--modern-border); /* Border tipis */
 }
 
 #hero-banner .container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Keseimbangan 1:1 */
     gap: var(--spacing-lg);
     align-items: center;
     padding: var(--spacing-lg);
@@ -270,27 +264,27 @@ a:hover {
 }
 
 .hero-content h1 {
-    font-size: 4em; /* Lebih besar lagi */
+    font-size: 3.5em;
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
-    color: var(--anime-blue); /* Warna biru untuk judul utama */
-    font-weight: 900; /* Sangat tebal */
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.15); /* Bayangan teks kuat */
+    color: var(--text-dark); /* Teks gelap utama */
+    font-weight: 800;
+    text-shadow: none; /* Hilangkan bayangan teks */
 }
 
 .hero-content p {
-    font-size: 1.3em; /* Lebih besar */
+    font-size: 1.1em;
     margin-bottom: var(--spacing-lg);
-    color: var(--anime-text-dark);
+    color: var(--text-light); /* Teks sekunder */
 }
 
 .hero-image {
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Kurva animasi lebih halus */
-    border: 4px solid var(--anime-primary); /* Border tebal */
+    box-shadow: var(--modern-shadow-medium); /* Bayangan sedang */
+    transition: transform 0.3s ease; /* Transisi standar */
+    border: 1px solid var(--modern-border); /* Border tipis */
 }
 
 .hero-image img {
@@ -301,48 +295,51 @@ a:hover {
 }
 
 .hero-image:hover {
-    transform: scale(1.05) rotate(2deg); /* Sedikit zoom dan rotasi */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateY(-5px); /* Efek naik sederhana */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat */
 }
 
 
 /* Comic Showcase Grid */
 .comic-showcase {
     padding: var(--spacing-lg) 0;
-    background-color: var(--anime-bg-main);
-    border-top: 1px solid var(--anime-border);
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--modern-border);
 }
 
 .comic-showcase h2 {
     text-align: center;
-    font-size: 3em; /* Ukuran h2 lebih besar */
+    font-size: 2.5em; /* Ukuran h2 lebih halus */
     margin-bottom: var(--spacing-lg);
-    color: var(--anime-pink); /* Warna pink untuk judul section */
-    font-weight: 800;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    color: var(--text-dark);
+    font-weight: 700;
+    text-shadow: none;
+    letter-spacing: 0.5px;
 }
 
 .grid-layout {
+    /* Layout 5 KOLOM di DESKTOP */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Min lebar 200px, akan jadi 5 kolom di layar lebar */
+    gap: var(--spacing-md); /* Jarak standar */
+    justify-content: center;
 }
 
 .comic-card {
-    background-color: var(--anime-bg-card);
+    background-color: var(--modern-bg-card);
     border-radius: var(--border-radius);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Bayangan lebih jelas */
+    box-shadow: var(--modern-shadow-light); /* Bayangan lembut */
     overflow: hidden;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
-    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left; /* Teks rata kiri di kartu */
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--anime-border); /* Border lebih tebal */
+    border: 1px solid var(--modern-border); /* Border tipis */
 }
 
 .comic-card:hover {
-    transform: translateY(-10px) scale(1.01); /* Lebih naik dan sedikit zoom */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25); /* Bayangan lebih kuat */
+    transform: translateY(-5px); /* Efek naik sederhana */
+    box-shadow: var(--modern-shadow-medium); /* Bayangan sedang */
 }
 
 .comic-card a {
@@ -353,61 +350,60 @@ a:hover {
 
 .comic-card img {
     width: 100%;
-    height: 350px; /* Tinggi thumbnail sedikit lebih tinggi lagi */
+    height: 280px; /* Tinggi thumbnail proporsional */
     object-fit: cover;
     display: block;
-    border-bottom: 2px solid var(--anime-border);
+    border-bottom: 1px solid var(--modern-border);
 }
 
 .comic-card h3 {
-    margin: var(--spacing-sm) var(--spacing-sm) var(--spacing-xs);
-    font-size: 1.4em; /* Lebih besar */
-    color: var(--anime-text-dark);
+    margin: var(--spacing-md) var(--spacing-md) var(--spacing-sm); /* Padding lebih merata */
+    font-size: 1.1em; /* Ukuran judul lebih kecil agar rapi */
+    color: var(--text-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
-    font-weight: 800; /* Lebih tebal */
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .comic-card .status {
-    font-size: 0.85em; /* Sedikit lebih besar */
-    padding: 5px 12px; /* Padding lebih besar */
-    border-radius: 8px; /* Lebih bulat */
+    font-size: 0.75em;
+    padding: 4px 8px;
+    border-radius: 4px;
     color: white;
-    font-weight: 700;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Bayangan status */
-    letter-spacing: 0.5px;
+    font-weight: 600;
+    box-shadow: none; /* Hilangkan bayangan status */
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }
 
 .comic-card .status.ongoing {
-    background-color: var(--anime-secondary-accent); /* Hijau yang lebih cerah */
+    background-color: #28A745; /* Hijau modern */
 }
 
 .comic-card .status.completed {
-    background-color: var(--anime-pink); /* Merah/pink cerah */
+    background-color: #DC3545; /* Merah modern */
 }
 
 .comic-card .genre {
-    margin: 0 var(--spacing-sm) var(--spacing-xs);
-    font-size: 0.95em; /* Sedikit lebih besar */
-    color: var(--anime-text-light);
-    text-align: left;
+    margin: 0 var(--spacing-md) var(--spacing-xs);
+    font-size: 0.8em;
+    color: var(--text-light);
 }
 
 .comic-card .sinopsis {
-    font-size: 1.05em;
-    color: var(--anime-text-dark);
-    padding: 0 var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85em;
+    color: var(--text-dark);
+    padding: 0 var(--spacing-md) var(--spacing-md);
     flex-grow: 1;
-    text-align: left;
     overflow: hidden;
     display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi 3 baris */
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-clamp: 3; /* Properti standar untuk kompatibilitas */
     text-overflow: ellipsis;
 }
+
 
 /* Filter and Sort Controls */
 .filter-sort-controls {
@@ -417,10 +413,10 @@ a:hover {
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
-    background-color: var(--anime-bg-card);
+    background-color: var(--modern-bg-card);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
-    border: 2px solid var(--anime-border); /* Border lebih tebal */
+    box-shadow: var(--modern-shadow-light);
+    border: 1px solid var(--modern-border);
 }
 
 .filter-group, .sort-group {
@@ -431,28 +427,30 @@ a:hover {
 }
 
 .filter-group label, .sort-group label {
-    font-weight: 700; /* Lebih tebal */
-    color: var(--anime-text-dark);
-    font-size: 1em; /* Ukuran label lebih besar */
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .filter-sort-controls select {
-    padding: 10px 15px; /* Padding lebih besar */
+    padding: 8px 12px;
     border-radius: var(--border-radius);
-    border: 2px solid var(--anime-border);
-    background-color: #f8f8f8;
-    color: var(--anime-text-dark);
-    font-size: 1em; /* Ukuran font lebih besar */
+    border: 1px solid var(--modern-border);
+    background-color: white;
+    color: var(--text-dark);
+    font-size: 0.9em;
     cursor: pointer;
     transition: all 0.2s ease;
-    min-width: 160px; /* Lebar minimum dropdown */
-    -webkit-appearance: none; /* Hilangkan gaya default panah */
+    min-width: 150px;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23212121%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23495057%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); /* Warna panah disesuaikan */
     background-repeat: no-repeat;
     background-position: right 10px center;
-    background-size: 18px;
+    background-size: 16px;
 }
 
 .filter-sort-controls select:hover {
@@ -462,38 +460,45 @@ a:hover {
 .filter-sort-controls select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.25);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
 }
 
 
 /* Footer */
 .main-footer {
     background-color: var(--header-footer-bg);
-    color: white;
+    color: rgba(255, 255, 255, 0.8); /* Teks footer sedikit transparan */
     text-align: center;
     padding: var(--spacing-md) 0;
     margin-top: var(--spacing-lg);
-    box-shadow: 0 -3px 8px rgba(0,0,0,0.25);
-    border-top: 3px solid var(--anime-accent); /* Garis atas yang menarik */
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+}
+.main-footer p a { /* Jika ada link di footer */
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.main-footer p a:hover {
+    color: white;
+    text-decoration: none;
 }
 
+
 /* Responsive Design */
-@media (max-width: 900px) {
-    /* Header */
+@media (max-width: 992px) { /* Medium devices (laptop kecil, tablet besar) */
     .main-header .container {
         flex-direction: column;
         gap: var(--spacing-sm);
-        padding-top: var(--spacing-sm);
-        padding-bottom: var(--spacing-sm);
     }
     .main-nav ul li {
         margin: 0 var(--spacing-sm);
     }
     .main-header .logo {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .main-header .logo img {
-        height: 38px;
+        height: 35px;
     }
     .header-actions {
         width: 100%;
@@ -502,17 +507,16 @@ a:hover {
         margin-left: 0;
     }
     .search-box input[type="text"] {
-        width: 60%;
+        width: 50%;
         max-width: 250px;
     }
     .search-box input[type="text"]:focus {
-        width: 70%;
+        width: 60%;
     }
-    .donate-header-btn {
+    .header-donate-btn {
         margin-left: var(--spacing-sm);
     }
 
-    /* Hero */
     #hero-banner .container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -522,24 +526,77 @@ a:hover {
         text-align: center;
     }
     .hero-image {
-        order: -1; /* Gambar di atas konten di mobile */
+        order: -1;
         margin-bottom: var(--spacing-md);
     }
     .hero-image img {
-        max-width: 80%;
+        max-width: 70%;
         margin: 0 auto;
     }
     .hero-image:hover {
-        transform: none; /* Hapus efek hover di mobile */
+        transform: none;
     }
     .hero-content h1 {
-        font-size: 3em;
+        font-size: 2.8em;
     }
     .hero-content p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
-    /* Filter/Sort */
+    .comic-showcase h2 {
+        font-size: 2em;
+    }
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Jadi 3-4 kolom */
+        gap: var(--spacing-md);
+    }
+    .comic-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) { /* Small devices (tablet portrait) */
+    .main-header .logo {
+        font-size: 1.3em;
+    }
+    .main-header .logo img {
+        height: 30px;
+    }
+    .main-nav ul li {
+        margin: 0 var(--spacing-xs);
+    }
+    .main-nav ul li a {
+        font-size: 0.9em;
+        padding: 4px 0;
+    }
+    .main-nav ul li a::after {
+        height: 2px;
+        bottom: -4px;
+    }
+    .search-box input[type="text"],
+    .search-box button,
+    .header-donate-btn {
+        padding: 7px 10px;
+        font-size: 0.85em;
+    }
+    .search-box input[type="text"] {
+        width: 60%;
+    }
+    .search-box button {
+        width: 30%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .hero-content p {
+        font-size: 0.95em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+
     .filter-sort-controls {
         flex-direction: column;
         align-items: stretch;
@@ -552,87 +609,36 @@ a:hover {
     }
     .filter-sort-controls select {
         width: 100%;
-        max-width: 280px;
+        max-width: 250px;
     }
     .comic-showcase h2 {
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
-}
-
-@media (max-width: 600px) {
-    /* Header */
-    .main-header .logo {
-        font-size: 1.4em;
-    }
-    .main-header .logo img {
-        height: 30px;
-    }
-    .main-nav ul li {
-        margin: 0 var(--spacing-xs);
-    }
-    .main-nav ul li a {
-        font-size: 1em;
-        padding: 5px 0;
-    }
-    .main-nav ul li a::after {
-        height: 3px;
-        bottom: -5px;
-    }
-    .search-box input[type="text"],
-    .search-box button,
-    .donate-header-btn {
-        padding: 8px 12px;
-        font-size: 0.9em;
-    }
-    .search-box input[type="text"] {
-        width: 65%;
-    }
-    .search-box input[type="text"]:focus {
-        width: 75%;
-    }
-
-    /* Hero */
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    .hero-content p {
-        font-size: 1em;
-    }
-    .btn {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    /* Comic Cards */
-    .comic-card h3 {
-        font-size: 1.2em;
-    }
-    .comic-card .status {
-        font-size: 0.75em;
-        padding: 3px 8px;
-        border-radius: 6px;
-    }
-    .comic-card .genre, .comic-card .sinopsis {
-        font-size: 0.9em;
+    
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 3-4 kolom di mobile landscape */
+        gap: var(--spacing-sm);
     }
     .comic-card img {
-        height: 280px; /* Lebih kecil di mobile */
+        height: 180px;
     }
-
-    /* Filter/Sort */
-    .filter-group label, .sort-group label {
-        font-size: 0.9em;
+    .comic-card h3 {
+        font-size: 1em;
     }
-    .filter-sort-controls select {
-        padding: 8px 12px;
-        font-size: 0.9em;
+    .comic-card .genre, .comic-card .sinopsis {
+        font-size: 0.75em;
+        -webkit-line-clamp: 2; /* Batasi 2 baris sinopsis */
     }
-    .comic-showcase h2 {
-        font-size: 2em;
+    .comic-card .status {
+        font-size: 0.65em;
+        padding: 2px 6px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 576px) { /* Extra small devices (ponsel) */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
     .main-header .logo span {
         display: none; /* Sembunyikan teks logo di layar sangat kecil */
     }
@@ -643,14 +649,11 @@ a:hover {
         margin: 0 var(--spacing-xs);
     }
     .header-actions {
-        flex-direction: row; /* Kembali ke baris, tapi tombolnya lebih kecil */
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Tumpuk ke bawah untuk search dan donasi */
         gap: var(--spacing-xs);
     }
     .search-box {
-        width: 100%; /* Ambil lebar penuh */
-        justify-content: center;
+        width: 100%;
     }
     .search-box input[type="text"] {
         width: 70%;
@@ -658,9 +661,30 @@ a:hover {
     .search-box button {
         width: 25%;
     }
-    .donate-header-btn {
+    .header-donate-btn {
         width: 95%; /* Hampir penuh */
         margin-left: 0;
     }
-}
 
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Umumnya 2 kolom di ponsel */
+        gap: var(--spacing-xs);
+    }
+    .comic-card img {
+        height: 160px;
+    }
+    .comic-card h3 {
+        font-size: 0.9em;
+    }
+    .comic-card .genre, .comic-card .sinopsis {
+        font-size: 0.7em;
+        -webkit-line-clamp: 1; /* Hanya 1 baris sinopsis di layar sangat kecil */
+    }
+}
