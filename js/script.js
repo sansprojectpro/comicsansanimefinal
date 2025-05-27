@@ -41,6 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: 'Boruto Naruto Next Generations',
+            title: 'Boruto Naruto Next Generations',
+            genre: ['Aksi', 'Petualangan', 'Fantasi'],
+            status: 'Ongoing',
+            sinopsis: 'Naruto adalah seorang shinobi muda dengan bakat nakal yang tidak bisa diperbaiki. Dia mencapai mimpinya untuk menjadi ninja terhebat di desa dan wajahnya ada di atas monumen Hokage. Tapi ini bukan ceritanya … Seorang ninja generasi baru siap naik panggung, dipimpin oleh putra Naruto sendiri, Boruto!',
+            thumbnail: 'comics/Boruto Naruto Next Generations/Boruto Naruto Next Generations.jpg',
+            isLatest: false,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter1/', pageCount: 57, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter1.5': { title: 'Chapter 1.5: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter1.5/', pageCount: 25, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter2/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'Chainsaw Man',
             title: 'Chainsaw Man',
             genre: ['Aksi', 'Horor', 'Supernatural'],
