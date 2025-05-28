@@ -27,6 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: 'The Demonic Cult Leader Is Too Reluctant',
+            title: 'The Demonic Cult Leader Is Too Reluctant',
+            genre: ['Aksi', 'Petualangan', 'Drama'],
+            status: 'Ongoing',
+            sinopsis: 'Cerita tentang do yugang, anak dari heavenly demon, yang takut menjadi pemimpin sekte demonic.',
+            thumbnail: 'comics/The Demonic Cult Leader Is Too Reluctant/The Demonic Cult Leader Is Too Reluctant.png',
+            isLatest: false,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter1/', pageCount: 26, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter2/', pageCount: 24, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter3/', pageCount: 27, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter4/', pageCount: 16, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter5/', pageCount: 21, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'Tokyo Revengers',
             title: 'Tokyo Revengers',
             genre: ['Aksi', 'Sci-Fi', 'Drama'],
