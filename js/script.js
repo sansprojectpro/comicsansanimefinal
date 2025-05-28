@@ -43,6 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+            id: 'The Extra Is Too Strong',
+            title: 'The Extra Is Too Strong',
+            genre: ['Aksi', 'Sci-Fi', 'Drama'],
+            status: 'Ongoing',
+            sinopsis: 'Setiap hari aku selalu mendapatkan pertanyaan yang sama, dengan jawaban yang tidak pernah berubah. Hal yang kumiliki hanyalah tatapan kasihan, bayaran tagihan bulanan, serta kenyataan bahwa aku orang setengah lumpuh. Mereka bilang, Tuhan tidak akan memberikan ujian yang tidak bisa kau hadapi, tapi aku lebih memilih untuk mati saja. Suatu hari, aku terbangun',
+            thumbnail: 'comics/The Extra Is Too Strong/The Extra Is Too Strong.webp',
+            isLatest: false,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter1/', pageCount: 27, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter2/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter3/', pageCount: 12, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter4/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter5', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'Alpha',
             title: 'Alpha',
             genre: ['Aksi', 'Petualangan',],
