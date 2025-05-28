@@ -138,7 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
             chapters: {
                 'chapter1': { title: 'Chapter 1: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter1/', pageCount: 55, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter2': { title: 'Chapter 2: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter2/', pageCount: 28, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter3': { title: 'Chapter 3: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter3/', pageCount: 26, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter3': { title: 'Chapter 3: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter3/', pageCount: 26, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter4/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter5/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter6': { title: 'Chapter 6: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter6/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter7': { title: 'Chapter 7: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter7/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter8': { title: 'Chapter 8: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter8/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter9': { title: 'Chapter 9: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter9/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter10': { title: 'Chapter 10: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter10/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
