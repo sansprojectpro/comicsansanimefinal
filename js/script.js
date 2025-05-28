@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
             chapters: {
                 'chapter1': { title: 'Chapter 1: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter1/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter2': { title: 'Chapter 2: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter2/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter3': { title: 'Chapter 3: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter3/', pageCount: 28, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter3': { title: 'Chapter 3: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter3/', pageCount: 28, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter4/', pageCount: 24, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Tokyo Revengers', pagesPath: 'comics/Tokyo Revengers/chapter5/', pageCount: 30, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
