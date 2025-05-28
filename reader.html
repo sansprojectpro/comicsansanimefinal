@@ -6,7 +6,7 @@
     <title>Baca Komik - Comic Sans Anime</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reader.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.jpg" type="image/png">
 </head>
 <body>
@@ -19,11 +19,10 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="#chapter-select">Pilih Chapter</a></li> 
+                    <li><a href="#chapter-select">Pilih Chapter</a></li>
                 </ul>
             </nav>
             <a href="https://saweria.co/Sanjayadtm" target="_blank" rel="noopener noreferrer" class="btn secondary-btn donate-header-btn">Donasi</a>
-        </div>
         </div>
     </header>
 
@@ -38,11 +37,13 @@
                     <option value="">Pilih Chapter</option>
                 </select>
             </div>
-            
+
+            <p id="page-indicator" class="page-indicator"></p>
+
             <div id="comic-pages" class="comic-pages-wrapper">
                 <p>Memuat halaman komik...</p>
             </div>
-            
+
             <div class="reader-controls">
                 <button id="prev-page" class="btn primary-btn" disabled>← Sebelumnya</button>
                 <button id="next-page" class="btn primary-btn" disabled>Selanjutnya →</button>
@@ -58,8 +59,7 @@
 
     <script src="js/reader.js"></script>
 
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+    <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -70,7 +70,5 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
