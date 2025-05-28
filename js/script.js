@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             thumbnail: 'comics/Sakamoto Days/sakamotodays.jpg',
             isLatest: true,
             chapters: {
-                'chapter1': { title: 'Chapter 1: Keluarga Baru', pagesPath: 'comics/Sakamoto Days/chapter1/', pageCount: 20, pageNameSuffix: '', pageExtension: 'jpg' },
-                'chapter2': { title: 'Chapter 2: Kembali Beraksi', pagesPath: 'comics/Sakamoto Days/chapter2/', pageCount: 22, pageNameSuffix: '', pageExtension: 'jpg' },
-                'chapter3': { title: 'Chapter 3: Ujian Pertama', pagesPath: 'comics/Sakamoto Days/chapter3/', pageCount: 18, pageNameSuffix: '', pageExtension: 'jpg' }
+                'chapter1': { title: 'Chapter 1: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter1/', pageCount: 52, pageNameSuffix: '', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter2/', pageCount: 25, pageNameSuffix: '', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter3/', pageCount: 24, pageNameSuffix: '', pageExtension: 'jpg' }
             }
         },
         {
