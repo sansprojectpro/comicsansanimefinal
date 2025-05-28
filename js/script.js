@@ -58,7 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter4': { title: 'Chapter 4: Alpha', pagesPath: 'comics/Alpha/chapter4/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter4.5': { title: 'Chapter 4.5: Alpha', pagesPath: 'comics/Alpha/chapter4.5/', pageCount: 42, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter5': { title: 'Chapter 5: Alpha', pagesPath: 'comics/Alpha/chapter5/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter5.5': { title: 'Chapter 5.5: Alpha', pagesPath: 'comics/Alpha/chapter5.5/', pageCount: 16, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter5.5': { title: 'Chapter 5.5: Alpha', pagesPath: 'comics/Alpha/chapter5.5/', pageCount: 16, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                 'chapter6': { title: 'Chapter 6: Alpha', pagesPath: 'comics/Alpha/chapter6/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter6.5': { title: 'Chapter 6.5: Alpha', pagesPath: 'comics/Alpha/chapter6.5/', pageCount: 21, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                 'chapter7': { title: 'Chapter 7: Alpha', pagesPath: 'comics/Alpha/chapter7/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter7.5': { title: 'Chapter 7.5: Alpha', pagesPath: 'comics/Alpha/chapter7.5/', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
