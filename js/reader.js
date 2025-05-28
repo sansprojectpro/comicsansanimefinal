@@ -5,33 +5,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
     const chapterSelect = document.getElementById('chapter-select');
+    const pageIndicatorElement = document.getElementById('page-indicator');
 
     let currentComicId = '';
     let currentChapterId = '';
-    let currentPageIndex = 0; // Menggunakan index, dimulai dari 0
+    let currentPageIndex = 0;
     let currentComicData = null;
-    let currentChapterPages = []; // Akan berisi array path gambar yang digenerate
+    let currentChapterPages = [];
+
+    // Mengatur readerMode secara default ke 'continuous-scroll'
+    let readerMode = 'continuous-scroll';
 
     // Ambil data komik dari localStorage
     const allComicsData = JSON.parse(localStorage.getItem('allComicsData')) || [];
     const comicsMap = new Map(allComicsData.map(comic => [comic.id, comic]));
+
+    // Variabel untuk melacak status scroll
+    let isScrollingToEnd = false; // Mencegah loop scroll tak terbatas
 
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
 
-    // Fungsi untuk menghasilkan array path halaman berdasarkan data chapter
     function generatePagesArray(chapterData) {
         const pages = [];
         if (chapterData && chapterData.pagesPath && chapterData.pageCount) {
             for (let i = 1; i <= chapterData.pageCount; i++) {
-                // Perbaiki padding agar sesuai dengan jumlah digit halaman terbanyak.
-                // Misal, jika pageCount 40, angka tertinggi 40 (2 digit).
-                // Jika pageCount 120, angka tertinggi 120 (3 digit).
                 const paddingLength = String(chapterData.pageCount).length;
                 const pageNumber = String(i).padStart(paddingLength, '0');
-                
                 const fullPath = `${chapterData.pagesPath}${pageNumber}${chapterData.pageNameSuffix || ''}.${chapterData.pageExtension || 'jpg'}`;
                 pages.push(fullPath);
             }
@@ -44,62 +46,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentComicData) {
             comicTitleReaderElement.textContent = currentComicData.title;
-            
+
             if (currentComicData.chapters && currentComicData.chapters[chapterId]) {
                 currentComicId = comicId;
                 currentChapterId = chapterId;
-                
-                // Panggil generatePagesArray untuk mengisi currentChapterPages
                 currentChapterPages = generatePagesArray(currentComicData.chapters[chapterId]);
-                
+
                 chapterTitleElement.textContent = currentComicData.chapters[chapterId].title;
-                currentPageIndex = 0; // Selalu mulai dari halaman pertama chapter baru
-                renderPage();
+                currentPageIndex = 0;
+                renderComicPages();
                 updateNavigationControls();
                 updateChapterDropdown();
+                updatePageIndicator();
+                window.scrollTo(0, 0); // Pastikan selalu scroll ke atas saat chapter baru dimuat
             } else {
                 chapterTitleElement.textContent = 'Chapter Tidak Ditemukan';
                 comicPagesElement.innerHTML = '<p>Maaf, chapter ini tidak tersedia untuk komik ini. <a href="index.html">Kembali ke Beranda</a></p>';
-                prevPageBtn.disabled = true;
-                nextPageBtn.disabled = true;
+                prevPageBtn.style.display = 'none';
+                nextPageBtn.style.display = 'none';
                 chapterSelect.innerHTML = '<option value="">Chapter Tidak Tersedia</option>';
-                chapterSelect.disabled = true; // Nonaktifkan dropdown
+                chapterSelect.disabled = true;
+                pageIndicatorElement.textContent = '';
             }
         } else {
             comicTitleReaderElement.textContent = 'Komik Tidak Ditemukan';
             chapterTitleElement.textContent = '';
             comicPagesElement.innerHTML = '<p>Maaf, komik ini tidak tersedia. <a href="index.html">Kembali ke Beranda</a></p>';
-            prevPageBtn.disabled = true;
-            nextPageBtn.disabled = true;
+            prevPageBtn.style.display = 'none';
+            nextPageBtn.style.display = 'none';
             chapterSelect.innerHTML = '<option value="">Komik Tidak Tersedia</option>';
-            chapterSelect.disabled = true; // Nonaktifkan dropdown
+            chapterSelect.disabled = true;
+            pageIndicatorElement.textContent = '';
         }
     }
 
-    function renderPage() {
-        comicPagesElement.innerHTML = ''; // Bersihkan konten sebelumnya
-        if (currentChapterPages.length > 0 && currentPageIndex >= 0 && currentPageIndex < currentChapterPages.length) {
-            const pageImage = document.createElement('img');
-            pageImage.src = currentChapterPages[currentPageIndex];
-            pageImage.alt = `${currentComicData.title} - Halaman ${currentPageIndex + 1}`;
-            comicPagesElement.appendChild(pageImage);
-        } else {
-            // Tampilkan pesan jika tidak ada halaman atau indeks di luar batas
+    function renderComicPages() {
+        comicPagesElement.innerHTML = '';
+
+        if (currentChapterPages.length === 0) {
             comicPagesElement.innerHTML = '<p>Tidak ada halaman untuk ditampilkan di chapter ini.</p>';
+            return;
+        }
+
+        if (readerMode === 'per-page') {
+            if (currentPageIndex >= 0 && currentPageIndex < currentChapterPages.length) {
+                const pageImage = document.createElement('img');
+                pageImage.src = currentChapterPages[currentPageIndex];
+                pageImage.alt = `${currentComicData.title} - Halaman ${currentPageIndex + 1}`;
+                pageImage.loading = 'eager';
+                comicPagesElement.appendChild(pageImage);
+            }
+        } else if (readerMode === 'continuous-scroll') {
+            currentChapterPages.forEach((src, index) => {
+                const pageImage = document.createElement('img');
+                pageImage.src = src;
+                pageImage.alt = `${currentComicData.title} - Halaman ${index + 1}`;
+                pageImage.loading = 'lazy';
+                pageImage.classList.add('comic-page-image');
+                comicPagesElement.appendChild(pageImage);
+            });
         }
     }
 
     function updateNavigationControls() {
-        // Tombol sebelumnya dinonaktifkan jika di halaman pertama (index 0)
-        prevPageBtn.disabled = currentPageIndex === 0;
-        // Tombol selanjutnya dinonaktifkan jika di halaman terakhir
-        nextPageBtn.disabled = currentPageIndex === currentChapterPages.length - 1;
+        if (readerMode === 'per-page') {
+            prevPageBtn.style.display = '';
+            nextPageBtn.style.display = '';
+            prevPageBtn.disabled = currentPageIndex === 0;
+            nextPageBtn.disabled = currentPageIndex === currentChapterPages.length - 1;
+        } else {
+            prevPageBtn.style.display = 'none';
+            nextPageBtn.style.display = 'none';
+        }
+    }
+
+    function updatePageIndicator() {
+        if (readerMode === 'per-page' && currentChapterPages.length > 0) {
+            pageIndicatorElement.textContent = `Halaman ${currentPageIndex + 1} dari ${currentChapterPages.length}`;
+        } else {
+            pageIndicatorElement.textContent = '';
+        }
     }
 
     function updateChapterDropdown() {
-        chapterSelect.innerHTML = ''; // Bersihkan dropdown
+        chapterSelect.innerHTML = '';
         if (currentComicData && currentComicData.chapters) {
-            for (const chapId in currentComicData.chapters) {
+            // Sort chapter keys to ensure numerical/sequential order for dropdown
+            // This is important if chapter IDs are 'chapter1', 'chapter2', 'chapter1.5', etc.
+            const sortedChapterKeys = Object.keys(currentComicData.chapters).sort((a, b) => {
+                // Custom sorting for chapter IDs like 'chapter1', 'chapter1.5', 'chapter2'
+                const parseChapterId = (id) => {
+                    const match = id.match(/chapter(\d+)(\.\d+)?/);
+                    if (match) {
+                        return parseFloat(match[1]) + (match[2] ? parseFloat(match[2]) : 0);
+                    }
+                    return 0; // Default for non-matching patterns
+                };
+                return parseChapterId(a) - parseChapterId(b);
+            });
+
+            sortedChapterKeys.forEach(chapId => {
                 const option = document.createElement('option');
                 option.value = chapId;
                 option.textContent = currentComicData.chapters[chapId].title;
@@ -107,55 +153,119 @@ document.addEventListener('DOMContentLoaded', () => {
                     option.selected = true;
                 }
                 chapterSelect.appendChild(option);
-            }
-            chapterSelect.disabled = false; // Aktifkan dropdown jika ada chapter
+            });
+            chapterSelect.disabled = false;
         } else {
-            chapterSelect.disabled = true; // Nonaktifkan jika tidak ada chapter
+            chapterSelect.disabled = true;
         }
     }
 
-    // Event Listeners untuk navigasi halaman
+    // Event Listeners untuk navigasi halaman (hanya berlaku untuk mode per-page)
     prevPageBtn.addEventListener('click', () => {
-        if (currentPageIndex > 0) {
+        if (readerMode === 'per-page' && currentPageIndex > 0) {
             currentPageIndex--;
-            renderPage();
+            renderComicPages();
             updateNavigationControls();
+            updatePageIndicator();
+            window.scrollTo(0, 0);
         }
     });
 
     nextPageBtn.addEventListener('click', () => {
-        // Pastikan ada halaman selanjutnya yang bisa diakses
-        if (currentPageIndex < currentChapterPages.length - 1) {
+        if (readerMode === 'per-page' && currentPageIndex < currentChapterPages.length - 1) {
             currentPageIndex++;
-            renderPage();
+            renderComicPages();
             updateNavigationControls();
+            updatePageIndicator();
+            window.scrollTo(0, 0);
         }
     });
 
     // Event Listener untuk perubahan chapter via dropdown
     chapterSelect.addEventListener('change', (event) => {
         const newChapterId = event.target.value;
-        if (newChapterId) { // Pastikan chapter yang dipilih bukan opsi kosong
-            // Perbarui URL browser tanpa memuat ulang halaman penuh
+        if (newChapterId) {
             window.history.pushState(null, '', `reader.html?comic=${currentComicId}&chapter=${newChapterId}`);
             loadComicAndChapter(currentComicId, newChapterId);
         }
     });
+
+    // --- LOGIC BARU: SCROLL KE ATAS SAAT MENCAPAI AKHIR CHAPTER (Continuous Scroll) ---
+    // Gunakan Intersection Observer untuk deteksi yang lebih efisien
+    let observer;
+
+    function setupIntersectionObserver() {
+        if (readerMode !== 'continuous-scroll' || !comicPagesElement) return;
+
+        // Pastikan observer sebelumnya di-disconnect
+        if (observer) {
+            observer.disconnect();
+        }
+
+        // Ambil elemen gambar terakhir
+        const lastImage = comicPagesElement.querySelector('.comic-page-image:last-child');
+
+        if (lastImage) {
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Jika elemen terakhir sepenuhnya terlihat DAN kita tidak sedang dalam proses scroll
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.99 && !isScrollingToEnd) {
+                        // isIntersecting: elemen masuk viewport
+                        // intersectionRatio >= 0.99: memastikan elemen hampir atau sepenuhnya terlihat
+                        // !isScrollingToEnd: mencegah trigger berulang saat sedang di-scroll otomatis
+                        console.log('Reached end of chapter. Scrolling to top.');
+                        isScrollingToEnd = true; // Set flag
+                        setTimeout(() => { // Beri sedikit jeda agar user melihat chapter selesai
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth' // Gulir dengan animasi halus
+                            });
+                        }, 500); // Setengah detik jeda
+
+                        // Setelah scroll selesai, reset flag
+                        window.addEventListener('scrollend', function onScrollEnd() {
+                            isScrollingToEnd = false;
+                            window.removeEventListener('scrollend', onScrollEnd);
+                        }, { once: true }); // event sekali jalan
+                    }
+                });
+            }, {
+                threshold: 0.99 // Trigger saat 99% dari elemen terlihat
+            });
+
+            observer.observe(lastImage);
+        }
+    }
+
+    // Panggil observer setiap kali chapter dimuat (jika mode continuous)
+    // Modifikasi fungsi loadComicAndChapter dan renderComicPages agar memanggil setupIntersectionObserver()
+    const originalLoadComicAndChapter = loadComicAndChapter;
+    loadComicAndChapter = (...args) => {
+        originalLoadComicAndChapter(...args);
+        if (readerMode === 'continuous-scroll') {
+            // Beri sedikit waktu agar gambar terakhir ter-render
+            setTimeout(setupIntersectionObserver, 300);
+        }
+    };
+    // Mengubah currentPageIndex menjadi 0 sudah dilakukan di loadComicAndChapter.
+
+    // Tambahkan pengurutan dropdown chapter agar chapter1.5 datang setelah chapter1
+    // (Ini sudah ada di kode sebelumnya, tapi saya pastikan tetap di sini dan berfungsi)
+    // Di dalam updateChapterDropdown:
 
     // Inisialisasi saat halaman dimuat
     const initialComicId = getQueryParam('comic');
     const initialChapterId = getQueryParam('chapter');
 
     if (initialComicId && initialChapterId) {
-        // Jika parameter ada, coba muat komik dan chapter
         loadComicAndChapter(initialComicId, initialChapterId);
     } else {
-        // Tampilkan pesan error dan nonaktifkan kontrol jika parameter URL tidak lengkap
         comicTitleReaderElement.textContent = 'Terjadi Kesalahan';
         chapterTitleElement.innerHTML = 'Parameter komik atau chapter tidak ditemukan di URL. Silakan kembali ke halaman <a href="index.html">Beranda</a> dan pilih komik yang ingin dibaca.';
-        comicPagesElement.innerHTML = ''; // Kosongkan area halaman
-        prevPageBtn.disabled = true;
-        nextPageBtn.disabled = true;
+        comicPagesElement.innerHTML = '';
+        prevPageBtn.style.display = 'none';
+        nextPageBtn.style.display = 'none';
         chapterSelect.disabled = true;
+        pageIndicatorElement.textContent = '';
     }
 });
