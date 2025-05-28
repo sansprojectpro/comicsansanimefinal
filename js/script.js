@@ -71,7 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter12': { title: 'Chapter 12: Alpha', pagesPath: 'comics/Alpha/chapter12/', pageCount: 57, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter13': { title: 'Chapter 13: Alpha', pagesPath: 'comics/Alpha/chapter13/', pageCount: 64, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter14': { title: 'Chapter 14: Alpha', pagesPath: 'comics/Alpha/chapter14/', pageCount: 68, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter15': { title: 'Chapter 15: Alpha', pagesPath: 'comics/Alpha/chapter15/', pageCount: 62, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter15': { title: 'Chapter 15: Alpha', pagesPath: 'comics/Alpha/chapter15/', pageCount: 62, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter16': { title: 'Chapter 16: Alpha', pagesPath: 'comics/Alpha/chapter16/', pageCount: 66, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter17': { title: 'Chapter 17: Alpha', pagesPath: 'comics/Alpha/chapter17/', pageCount: 67, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter18': { title: 'Chapter 18: Alpha', pagesPath: 'comics/Alpha/chapter18/', pageCount: 65, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter19': { title: 'Chapter 19: Alpha', pagesPath: 'comics/Alpha/chapter19/', pageCount: 69, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter20': { title: 'Chapter 20: Alpha', pagesPath: 'comics/Alpha/chapter20/', pageCount: 75, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter20.5': { title: 'Chapter 20.5: Alpha', pagesPath: 'comics/Alpha/chapter20.5/', pageCount: 16, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
