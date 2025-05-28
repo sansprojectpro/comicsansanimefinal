@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter17': { title: "Chapter 17: Kyou mo Veranda de", pagesPath: "comics/Kyou mo Veranda de/chapter17/", pageCount: 16, pageNameSuffix: ".kiryuu01.com", pageExtension: "jpg" },
                 'chapter18': { title: "Chapter 18: Kyou mo Veranda de", pagesPath: "comics/Kyou mo Veranda de/chapter18/", pageCount: 17, pageNameSuffix: ".kiryuu01.com", pageExtension: "jpg" },
                 'chapter19': { title: "Chapter 19: Kyou mo Veranda de", pagesPath: "comics/Kyou mo Veranda de/chapter19/", pageCount: 16, pageNameSuffix: ".kiryuu01.com", pageExtension: "jpg" }
-
             }
         },
         {
