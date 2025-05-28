@@ -1,41 +1,77 @@
-/* Custom Properties (Variables) - Gaya Futuristik/Dark Sci-Fi */
+/* Custom Properties (Variables) - Gaya Reader Modern dan Bersih */
 :root {
-    /* Warna dasar yang gelap dan kontras tajam */
-    --futuristic-bg-dark: #0A0A0E; /* Hampir hitam */
-    --futuristic-bg-mid: #1A1A20; /* Abu-abu sangat gelap */
-    --futuristic-primary-accent: #00E676; /* Hijau neon */
-    --futuristic-secondary-accent: #64FFDA; /* Cyan terang */
-    --futuristic-text-light: #E0E0E0; /* Abu-abu terang untuk teks */
-    --futuristic-text-muted: #888888; /* Abu-abu untuk teks sekunder */
-    --futuristic-border: #33333A; /* Border gelap */
-    --futuristic-shadow-glow: 0 0 15px rgba(0, 230, 118, 0.4); /* Glow hijau */
-    --futuristic-shadow-dark: 0 5px 20px rgba(0, 0, 0, 0.6); /* Bayangan dalam */
-    --futuristic-gradient-btn: linear-gradient(90deg, #00C853 0%, #00BFA5 100%); /* Gradien tombol */
+    /* DEFAULT THEME: Futuristik/Dark Sci-Fi (tetap sebagai fallback atau opsi) */
+    --futuristic-bg-dark: #0A0A0E;
+    --futuristic-bg-mid: #1A1A20;
+    --futuristic-primary-accent: #00E676;
+    --futuristic-secondary-accent: #64FFDA;
+    --futuristic-text-light: #E0E0E0;
+    --futuristic-text-muted: #888888;
+    --futuristic-border: #33333A;
+    --futuristic-shadow-glow: 0 0 15px rgba(0, 230, 118, 0.4);
+    --futuristic-shadow-dark: 0 5px 20px rgba(0, 0, 0, 0.6);
+    --futuristic-gradient-btn: linear-gradient(90deg, #00C853 0%, #00BFA5 100%);
 
-    /* Menggunakan variabel global dari style.css jika diperlukan */
-    /* Misalnya, jika header/footer dari style.css juga ingin diubah */
-    --header-footer-bg: #111115; /* Gelap sesuai tema */
-    --primary-color: var(--futuristic-primary-accent);
-    --accent-color: var(--futuristic-secondary-accent);
-    --text-dark: var(--futuristic-text-light); /* Override text-dark global agar terang */
-    --text-light: var(--futuristic-text-muted); /* Override text-light global agar muted */
+    /* Retro/Vaporwave (Jika masih ingin disimpan sebagai opsi, komentar saja) */
+    --retro-bg-main: linear-gradient(135deg, #4A00B8, #9A00E8, #FF00A6);
+    --retro-bg-card: rgba(255, 255, 255, 0.1);
+    --retro-primary-accent: #00FFFF;
+    --retro-secondary-accent: #FF00FF;
+    --retro-text-light: #F0F0F0;
+    --retro-text-muted: #B0B0B0;
+    --retro-border: #00FFFF;
+    --retro-shadow-glow: 0 0 10px #FF00FF, 0 0 20px #FF00FF;
+    --retro-shadow-dark: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    --retro-gradient-btn: linear-gradient(45deg, #FF00FF 0%, #00FFFF 100%);
+
+    /* NEW THEME: Modern dan Bersih */
+    --modern-bg-main: #F4F7F6; /* Latar belakang sangat terang, sedikit off-white */
+    --modern-bg-card: #FFFFFF; /* Putih bersih untuk container */
+    --modern-primary-accent: #007bff; /* Biru cerah yang umum dan bersih */
+    --modern-secondary-accent: #6c757d; /* Abu-abu muted untuk secondary */
+    --modern-text-dark: #212529; /* Teks sangat gelap */
+    --modern-text-light: #495057; /* Teks abu-abu untuk paragraph/muted */
+    --modern-border: #e9ecef; /* Border sangat halus */
+    --modern-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.05); /* Shadow sangat lembut */
+    --modern-shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow lebih terlihat */
+    --modern-gradient-btn: linear-gradient(45deg, #007bff 0%, #0056b3 100%); /* Gradien biru kalem */
+
+    /* Pilihan Tema Aktif: Ubah ini untuk mengganti tema */
+    /* Saat ini aktif: Modern dan Bersih */
+    --header-footer-bg: #343A40; /* Biarkan agak gelap atau sesuai style.css */
+    --reader-bg: var(--modern-bg-main);
+    --reader-container-bg: var(--modern-bg-card);
+    --main-title-color: var(--modern-text-dark);
+    --chapter-title-color: var(--modern-text-light);
+    --dropdown-border-color: var(--modern-border);
+    --dropdown-bg-color: var(--modern-bg-card);
+    --dropdown-text-color: var(--modern-text-dark);
+    --dropdown-hover-bg: #f8f9fa; /* Lebih terang saat hover */
+    --dropdown-hover-border: var(--modern-primary-accent);
+    --image-border: var(--modern-border);
+    --image-shadow: var(--modern-shadow-medium);
+    --button-gradient: var(--modern-gradient-btn);
+    --button-hover-bg: #0056b3; /* Biru gelap saat hover */
+    --button-shadow: var(--modern-shadow-light);
+    --page-indicator-color: var(--modern-primary-accent);
+
 
     /* Variabel spasi dan radius tetap atau disesuaikan */
     --spacing-xs: 5px;
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 40px;
-    --border-radius: 4px; /* Sedikit lebih tajam */
+    --border-radius: 8px; /* Sudut lebih membulat untuk kesan modern */
 }
 
 /* --- Global Reader Styles --- */
 body {
-    background-color: var(--futuristic-bg-dark); /* Latar belakang sangat gelap */
-    color: var(--futuristic-text-light); /* Teks dasar terang */
+    background: var(--reader-bg);
+    color: var(--modern-text-dark);
 }
 
 #comic-reader-page {
-    background-color: var(--futuristic-bg-dark); /* Latar belakang gelap konsisten */
+    background: var(--reader-bg);
     padding: var(--spacing-lg) 0;
     min-height: calc(100vh - 100px);
     display: flex;
@@ -45,125 +81,110 @@ body {
 }
 
 .reader-container {
-    max-width: 980px; /* Lebih lebar untuk kesan luas */
+    max-width: 980px;
     width: 100%;
     margin: 0 auto;
-    padding: var(--spacing-lg); /* Padding lebih besar */
-    background-color: var(--futuristic-bg-mid); /* Background kontainer abu-abu gelap */
+    padding: var(--spacing-lg);
+    background-color: var(--reader-container-bg);
     border-radius: var(--border-radius);
-    box-shadow: var(--futuristic-shadow-dark); /* Bayangan dalam yang kuat */
+    box-shadow: var(--modern-shadow-medium); /* Shadow yang bersih */
     text-align: center;
-    color: var(--futuristic-text-light);
-    border: 1px solid var(--futuristic-border); /* Border tipis yang tajam */
+    color: var(--modern-text-dark);
+    border: 1px solid var(--modern-border); /* Border yang sangat halus */
+    /* Hapus backdrop-filter jika tidak ingin efek transparan */
+    backdrop-filter: none;
 }
 
 #comic-title-reader {
-    font-family: 'Share Tech Mono', monospace; /* Font monospace untuk kesan techy */
-    font-size: 3em; /* Sangat besar */
-    color: var(--futuristic-primary-accent); /* Hijau neon */
+    font-family: 'Inter', sans-serif; /* Font modern yang bersih */
+    font-size: 2.8em; /* Ukuran yang proporsional */
+    color: var(--main-title-color);
     margin-bottom: var(--spacing-xs);
     padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--futuristic-secondary-accent); /* Garis cyan tajam */
-    font-weight: bold;
-    letter-spacing: 0.1em; /* Spasi antar huruf yang jelas */
-    text-shadow: 0 0 8px rgba(0, 230, 118, 0.6); /* Efek glow neon */
+    border-bottom: 1px solid var(--modern-border); /* Garis tipis dan bersih */
+    font-weight: 700; /* Bold */
+    letter-spacing: -0.02em; /* Sedikit ketat untuk modern */
+    text-shadow: none; /* Hilangkan shadow teks */
 }
 
 #chapter-title {
-    font-family: 'Rajdhani', sans-serif; /* Font sci-fi sans-serif */
-    font-size: 1.8em;
-    color: var(--futuristic-text-muted); /* Warna muted */
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6em;
+    color: var(--chapter-title-color);
     margin-bottom: var(--spacing-md);
     font-style: normal;
-    text-transform: uppercase; /* Huruf kapital */
+    text-transform: none; /* Tidak uppercase */
+    letter-spacing: 0; /* Normal spacing */
+    font-weight: 400; /* Regular weight */
 }
 
-/* --- Styling Dropdown "Pilih Chapter" (Sangat Keren - Futuristik) --- */
-.chapter-nav-top {
-    margin-bottom: var(--spacing-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    position: relative;
-    width: 100%;
-    max-width: 450px; /* Batasi lebar total dropdown */
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* --- Styling Dropdown "Pilih Chapter" --- */
 .chapter-nav-top label {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.2em;
-    color: var(--futuristic-primary-accent); /* Hijau neon */
-    font-weight: 700;
-    text-shadow: 0 0 5px rgba(0, 230, 118, 0.5); /* Glow neon pada label */
-    text-transform: uppercase;
-    margin-bottom: var(--spacing-xs);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1em;
+    color: var(--modern-text-dark);
+    font-weight: 600;
+    text-shadow: none;
+    text-transform: uppercase; /* Tetap uppercase untuk label */
 }
 
 #chapter-select {
-    font-family: 'Share Tech Mono', monospace; /* Font monospace */
-    padding: 14px 25px; /* Padding lebih besar */
-    padding-right: 55px; /* Tambahan padding untuk ikon kustom */
-    font-size: 1.1em;
+    font-family: 'Inter', sans-serif;
+    padding: 12px 20px; /* Padding lebih kecil sedikit */
+    padding-right: 45px; /* Sesuaikan padding untuk ikon */
+    font-size: 1em;
     border-radius: var(--border-radius);
-    border: 2px solid var(--futuristic-primary-accent); /* Border hijau neon */
-    background-color: #2A2A30; /* Background dropdown lebih gelap */
-    color: var(--futuristic-text-light); /* Teks terang */
+    border: 1px solid var(--dropdown-border-color);
+    background-color: var(--dropdown-bg-color);
+    color: var(--dropdown-text-color);
     cursor: pointer;
     width: 100%;
-    max-width: 380px; /* Lebar dropdown itu sendiri */
+    max-width: 350px; /* Lebih ramping */
     appearance: none;
-    
-    /* Custom panah dropdown - Ikon yang lebih 'techy' */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2300E676%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');
+    /* Ubah ikon panah agar lebih halus dan sesuai warna modern */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23495057%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
-    background-position: right 20px center; /* Posisi ikon panah */
-    background-size: 22px 22px; /* Ukuran ikon panah */
-    
-    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5); /* **Efek glow neon di awal** */
-    transition: all 0.3s ease-in-out; /* Transisi halus */
+    background-position: right 15px center;
+    background-size: 18px 18px;
+    box-shadow: var(--modern-shadow-light); /* Shadow lembut */
+    transition: all 0.2s ease-in-out;
 }
 
 #chapter-select:hover {
-    border-color: var(--futuristic-secondary-accent); /* Border berubah warna saat hover ke cyan */
-    background-color: #3A3A40; /* Sedikit lebih terang saat hover */
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.7); /* **Glow cyan lebih kuat saat hover** */
+    border-color: var(--dropdown-hover-border);
+    background-color: var(--dropdown-hover-bg);
+    box-shadow: var(--modern-shadow-medium);
 }
 
 #chapter-select:focus {
     outline: none;
-    border-color: var(--futuristic-secondary-accent);
-    box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.5), var(--futuristic-shadow-glow); /* **Glow ganda saat fokus** */
+    border-color: var(--dropdown-hover-border);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Fokus dengan ring biru */
 }
 
-/* Styling untuk opsi di dalam dropdown */
 #chapter-select option {
-    background-color: #2A2A30; /* Background opsi gelap */
-    color: var(--futuristic-text-light); /* Teks opsi terang */
-    padding: 10px;
-    font-family: 'Share Tech Mono', monospace; /* Konsisten */
+    background-color: var(--modern-bg-card);
+    color: var(--modern-text-dark);
+    font-family: 'Inter', sans-serif;
 }
 
 #chapter-select option:checked {
-    background-color: var(--futuristic-primary-accent); /* Hijau neon untuk opsi terpilih */
-    color: black; /* Teks hitam agar kontras dengan neon */
+    background-color: var(--modern-primary-accent);
+    color: white;
 }
 
 #chapter-select option:hover {
-    background-color: var(--futuristic-secondary-accent); /* Cyan terang saat hover opsi */
-    color: var(--futuristic-bg-dark); /* Teks gelap kontras */
+    background-color: var(--modern-primary-accent);
+    color: white;
 }
 
 #chapter-select:disabled {
-    background-color: #333;
-    border-color: #555;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.7;
     box-shadow: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); /* Panah abu-abu saat disabled */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23adb5bd%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); /* Panah abu-abu saat disabled */
 }
 
 /* --- Styling Halaman Komik (Gambar) --- */
@@ -174,101 +195,104 @@ body {
     align-items: center;
 }
 
+.comic-pages-wrapper .comic-page-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0; /* Biarkan 0 untuk continuous */
+    box-shadow: none; /* Hilangkan shadow individual */
+    transition: none;
+    border: none; /* Tidak ada border di antara gambar */
+}
+
+/* Styling untuk gambar di mode per-page (jika diaktifkan) */
 .comic-pages-wrapper img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto var(--spacing-sm) auto;
-    border-radius: var(--border-radius); /* Sudut tajam */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 230, 118, 0.3); /* **Bayangan gelap + glow halus** */
-    border: 1px solid var(--futuristic-border); /* Border tipis */
-    transition: transform 0.2s ease-out;
+    border-radius: var(--border-radius); /* Sudut membulat */
+    box-shadow: var(--image-shadow);
+    border: 1px solid var(--image-border);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease;
 }
 
 .comic-pages-wrapper img:hover {
-    transform: scale(1.008); /* Sedikit zoom */
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 230, 118, 0.5); /* Glow lebih kuat */
+    transform: translateY(-2px); /* Sedikit naik */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow lebih kuat */
+}
+
+/* --- Styling Indikator Halaman --- */
+.page-indicator {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    color: var(--page-indicator-color);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500; /* Medium weight */
+    text-transform: none; /* Tidak uppercase */
+    letter-spacing: 0.02em;
+    text-shadow: none;
 }
 
 /* --- Styling Kontrol Navigasi (Tombol Prev/Next) --- */
-.reader-controls {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-    width: 100%;
-    max-width: 550px; /* Tombol sedikit lebih lebar */
-}
-
 .reader-controls .btn {
-    font-family: 'Rajdhani', sans-serif; /* Font sci-fi untuk tombol */
+    font-family: 'Inter', sans-serif;
     flex-grow: 1;
-    padding: 18px 30px; /* Tombol lebih besar */
-    font-size: 1.3em;
-    font-weight: 700;
-    background: var(--futuristic-gradient-btn); /* **Gradien futuristik** */
-    color: black; /* Teks hitam untuk kontras dengan neon */
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    padding: 14px 25px; /* Padding lebih standar */
+    font-size: 1.1em;
+    font-weight: 600; /* Semibold */
+    background: var(--button-gradient);
+    color: white;
+    border-radius: var(--border-radius); /* Lebih membulat */
+    transition: all 0.2s ease;
+    text-shadow: none;
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3); /* **Glow hijau di tombol** */
+    box-shadow: var(--button-shadow);
     text-transform: uppercase;
 }
 
 .reader-controls .btn:hover {
-    background: var(--futuristic-secondary-accent); /* Warna cyan saat hover */
-    color: var(--futuristic-bg-dark); /* Teks gelap kontras */
-    transform: translateY(-4px) scale(1.03); /* Lebih naik dan zoom */
-    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.5), 0 0 20px rgba(100, 255, 218, 0.7); /* **Glow dan bayangan lebih kuat** */
+    background: var(--button-hover-bg);
+    color: white;
+    transform: translateY(-2px); /* Efek naik ringan */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-shadow: none;
 }
 
 .reader-controls .btn:disabled {
-    background: #333;
-    color: #666;
+    background: #e9ecef;
+    color: #adb5bd;
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 0.7;
     transform: none;
     box-shadow: none;
     text-shadow: none;
-    border: 1px dashed #555; /* Border putus-putus */
+    border: 1px solid #dee2e6; /* Border solid abu-abu */
 }
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 600px) {
-    #comic-reader-page {
-        padding: var(--spacing-md) 0;
-    }
-    .reader-container {
-        padding: var(--spacing-sm);
-        border-radius: 0;
-        box-shadow: none;
-    }
     #comic-title-reader {
-        font-size: 2.2em;
-        letter-spacing: 0.03em;
+        font-size: 2em;
     }
     #chapter-title {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
-    .reader-controls {
-        flex-direction: column;
-        max-width: none;
-    }
-    .reader-controls .btn {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 1.1em;
-    }
-    .chapter-nav-top {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        max-width: 100%;
+    .chapter-nav-top label {
+        font-size: 1em;
     }
     #chapter-select {
-        max-width: 100%;
+        font-size: 0.95em;
         padding: 10px 15px;
-        padding-right: 40px;
+        padding-right: 35px;
+    }
+    .page-indicator {
         font-size: 1em;
+    }
+    .reader-controls .btn {
+        font-size: 0.95em;
+        padding: 12px 20px;
     }
 }
