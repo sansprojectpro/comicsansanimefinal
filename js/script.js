@@ -125,7 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
             chapters: {
                 'chapter1': { title: 'Chapter 1: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter1/', pageCount: 57, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter1.5': { title: 'Chapter 1.5: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter1.5/', pageCount: 25, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter2': { title: 'Chapter 2: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter2/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter2': { title: 'Chapter 2: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter2/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter3/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter4/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter5/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter6': { title: 'Chapter 6: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter6/', pageCount: 47, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter7': { title: 'Chapter 7: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter7/', pageCount: 49, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter8': { title: 'Chapter 8: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter8/', pageCount: 45, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter9': { title: 'Chapter 9: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter9/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter10': { title: 'Chapter 10: Boruto Naruto Next Generations', pagesPath: 'comics/Boruto Naruto Next Generations/chapter10/', pageCount: 46, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
