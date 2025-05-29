@@ -78,7 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter2': { title: 'Chapter 2: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter2/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter3': { title: 'Chapter 3: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter3/', pageCount: 12, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter4': { title: 'Chapter 4: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter4/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter5': { title: 'Chapter 5: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter5/', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter5': { title: 'Chapter 5: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter5/', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter6': { title: 'Chapter 6: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter6/', pageCount: 18, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter7': { title: 'Chapter 7: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter7/', pageCount: 21, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter8': { title: 'Chapter 8: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter8/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter9': { title: 'Chapter 9: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter9/', pageCount: 11, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter10': { title: 'Chapter 10: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter10/', pageCount: 13, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
