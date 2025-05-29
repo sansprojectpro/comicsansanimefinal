@@ -41,7 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter2': { title: 'Chapter 2: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter2/', pageCount: 24, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
                 'chapter3': { title: 'Chapter 3: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter3/', pageCount: 27, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
                 'chapter4': { title: 'Chapter 4: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter4/', pageCount: 16, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
-                'chapter5': { title: 'Chapter 5: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter5/', pageCount: 21, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' }
+                'chapter5': { title: 'Chapter 5: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter5/', pageCount: 21, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter6': { title: 'Chapter 6: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter6/', pageCount: 16, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg'},
+                'chapter7': { title: 'Chapter 7: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter7/', pageCount: 17, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg'},
+                'chapter8': { title: 'Chapter 8: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter8/', pageCount: 20, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter9': { title: 'Chapter 9: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter9/', pageCount: 19, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' },
+                'chapter10': { title: 'Chapter 10: The Demonic Cult Leader Is Too Reluctant', pagesPath: 'comics/The Demonic Cult Leader Is Too Reluctant/chapter10/', pageCount: 13, pageNameSuffix: '.kiryuu.org', pageExtension: 'jpg' }
             }
         },
         {
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter2': { title: 'Chapter 2: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter2/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter3': { title: 'Chapter 3: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter3/', pageCount: 12, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter4': { title: 'Chapter 4: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter4/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter5': { title: 'Chapter 5: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter5', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter5': { title: 'Chapter 5: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter5/', pageCount: 15, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
