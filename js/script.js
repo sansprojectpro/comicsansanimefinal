@@ -185,7 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter7': { title: 'Chapter 7: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter7/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter8': { title: 'Chapter 8: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter8/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter9': { title: 'Chapter 9: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter9/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter10': { title: 'Chapter 10: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter10/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter10': { title: 'Chapter 10: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter10/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter11': { title: 'Chapter 11: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter11/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter12': { title: 'Chapter 12: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter12/', pageCount: 21, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter13': { title: 'Chapter 13: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter13/', pageCount: 21, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter14': { title: 'Chapter 14: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter14/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter15': { title: 'Chapter 15: Chainsaw Man', pagesPath: 'comics/Chainsaw Man/chapter15/', pageCount: 24, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
