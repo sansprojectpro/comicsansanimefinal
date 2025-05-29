@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             chapters: {
                 'chapter1': { title: 'Chapter 1: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter1/', pageCount: 52, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
                 'chapter2': { title: 'Chapter 2: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter2/', pageCount: 25, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
-                'chapter3': { title: 'Chapter 3: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter3/', pageCount: 24, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+                'chapter3': { title: 'Chapter 3: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter3/', pageCount: 24, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter4/', pageCount: 19, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Sakamoto Days', pagesPath: 'comics/Sakamoto Days/chapter5/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
         {
