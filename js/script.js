@@ -29,6 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
+        id: 'Jujutsu Kaisen',
+            title: 'Jujutsu Kaisen',
+            genre: ['Aksi', 'Komedi', 'Misteri'],
+            status: 'Ongoing',
+            sinopsis: 'TaroYuuji adalah seorang jenius di trek dan lapangan. Tapi dia sama sekali tidak tertarik untuk berputar-putar, dia bahagia sebagai seorang clam di Klub Penelitian Ilmu Gaib. Meskipun dia hanya ada di klub untuk iseng, segalanya menjadi serius ketika roh asli muncul di sekolah! Hidup akan menjadi sangat aneh di SMA Kota Sugisawa 3!',
+            thumbnail: 'comics/Jujutsu Kaisen/Jujutsu Kaisen.jpg',
+            isLatest: true,
+            chapters: {
+                'chapter1': { title: 'Chapter 1: Jujutsu Kaisen', pagesPath: 'comics/Jujutsu Kaisen/chapter1/', pageCount: 53, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter2': { title: 'Chapter 2: Jujutsu Kaisen', pagesPath: 'comics/Jujutsu Kaisen/chapter2/', pageCount: 26, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter3': { title: 'Chapter 3: Jujutsu Kaisen', pagesPath: 'comics/Jujutsu Kaisen/chapter3/', pageCount: 23, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter4': { title: 'Chapter 4: Jujutsu Kaisen', pagesPath: 'comics/Jujutsu Kaisen/chapter4/', pageCount: 20, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+                'chapter5': { title: 'Chapter 5: Jujutsu Kaisen', pagesPath: 'comics/Jujutsu Kaisen/chapter5/', pageCount: 21, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+            }
+        },
+        {
             id: 'The Demonic Cult Leader Is Too Reluctant',
             title: 'The Demonic Cult Leader Is Too Reluctant',
             genre: ['Aksi', 'Petualangan', 'Drama'],
@@ -86,6 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 'chapter10': { title: 'Chapter 10: The Extra Is Too Strong', pagesPath: 'comics/The Extra Is Too Strong/chapter10/', pageCount: 13, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
             }
         },
+        {
+    id: 'Kimetsu no Yaiba',
+    title: 'Kimetsu no Yaiba',
+    genre: ['Aksi', 'Supernatural', 'Drama'],
+    status: 'Ongoing',
+    sinopsis: 'Tanjiro Kamado adalah anak baik hati yang tinggal di pegunungan bersama keluarganya. Suatu hari, ia menemukan keluarganya dibantai oleh iblis, dan adik perempuannya Nezuko berubah menjadi iblis. Untuk membalaskan dendam dan mengembalikan Nezuko menjadi manusia, Tanjiro menjadi pembasmi iblis.',
+    thumbnail: 'comics/Kimetsu no Yaiba/Kimetsu no Yaiba.jpg',
+    isLatest: false,
+    chapters: {
+        'chapter1': { title: 'Chapter 1: Kimetsu no Yaiba', pagesPath: 'comics/Kimetsu no Yaiba/chapter1/', pageCount: 53, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+        'chapter2': { title: 'Chapter 2: Kimetsu no Yaiba', pagesPath: 'comics/Kimetsu no Yaiba/chapter2/', pageCount: 24, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+        'chapter3': { title: 'Chapter 3: Kimetsu no Yaiba', pagesPath: 'comics/Kimetsu no Yaiba/chapter3/', pageCount: 22, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+        'chapter4': { title: 'Chapter 4: Kimetsu no Yaiba', pagesPath: 'comics/Kimetsu no Yaiba/chapter4/', pageCount: 17, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' },
+        'chapter5': { title: 'Chapter 5: Kimetsu no Yaiba', pagesPath: 'comics/Kimetsu no Yaiba/chapter5/', pageCount: 18, pageNameSuffix: '.kiryuu.id', pageExtension: 'jpg' }
+    }
+},
         {
             id: 'Alpha',
             title: 'Alpha',
